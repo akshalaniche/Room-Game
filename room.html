@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Enchanted Forest</title>
+        <style type="text/css">
+            body{
+                 background-color:gainsboro;
+                 font-family:Verdana, Geneva, Tahoma, sans-serif;
+                 text-align: center;
+            }
+            .dirbutton{
+                width: 100px;
+                border-radius: 8px;
+                border-width: 2px;
+                border-color: black;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                transition-duration: 0.4s;
+                background-color: white;
+                color:black;
+            }
+            .dirbutton:hover{
+                background-color: #cc9966;
+                color:whitesmoke;
+            }
+            td {
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: center;
+		        vertical-align: middle;
+            }
+            .center{ 
+                text-align: center;
+            } 
+            input[type="text"]{
+                font-size:18px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="center"> Welcome to the Enchanted Forest!</h1>
+        <p class="center">
+            <img src="room.jpg" border= "2"/>
+        </p>
+        <p class="center" style="font-size: 14px"> You may: DROP n, PLAY, REFRESH or EXIT</p>
+
+        <form class="center" method="post" action="http://www.cs.mcgill.ca/~jcao25/cgi-bin/transporter.py">
+                <input type="hidden" name="inventory" value="1,0">
+                <input type="hidden" name="URL" value="http://www.cs.mcgill.ca/~aanich/cgi-bin/room.cgi">
+                <button class="dirbutton" type="submit">North</button> 
+        </form>
+
+        <table style="margin: 0px auto;">
+            <tr>
+                <td> <form action="http://www.cs.mcgill.ca/~jmanal2/cgi-bin/transporter.py" method="post"> 
+                    <input type="hidden" name="inventory" value="1,0">
+                    <input type="hidden" name="URL" value="http://www.cs.mcgill.ca/~aanich/cgi-bin/">
+		    <input type="hidden" name="intermed" value="no">
+                    <button class="dirbutton" type="submit">West</button>  
+                    </form> 
+                </td>
+                <td> <form action = "http://www.cs.mcgill.ca/~aanich/cgi-bin/room.cgi" method="post">
+                        <input type="hidden" name="inventory" value="1,0">
+		                <input type="text" style="text-align: center; width: 600px; height: 30px; border-width: 2px; border-color: black; " name="command">
+			            <p style="margin: 4px 0 0 0"><input class="dirbutton" style="padding:2px 8px 2px 8px; width:auto;" type="submit" value="Submit"></p>
+                    </form>
+                </td>
+                <td> <form action="http://cs.mcgill.ca/~sawadi/cgi-bin/transporter.py" method="post" > 
+                    <input type="hidden" name="inventory" value="1,0">
+                    <input type="hidden" name="URL" value="http://www.cs.mcgill.ca/~aanich/cgi-bin/room.cgi">
+                    <button class="dirbutton" type="submit">East</button> 
+                    </form> 
+                </td>
+            </tr>
+        </table>
+        <form class="center" action="http://cs.mcgill.ca/~znadea/cgi-bin/transporter.py" method="post">
+                <input type="hidden" name="inventory" value="1,0">
+                <input type="hidden" name="URL" value="http://www.cs.mcgill.ca/~aanich/cgi-bin/room.cgi">
+                <button class="dirbutton" type="submit">South</button> 
+        </form>
+    </body>
+</html>
+
